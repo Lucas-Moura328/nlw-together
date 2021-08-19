@@ -1,0 +1,24 @@
+yarn --init -y
+yarn add typescript -D
+yarn tsc --init 	//scrict: false
+yarn tsc 		//converte um ts em js
+yarn add express
+yarn add @types/express -D
+yarn add ts-node-dev -D
+
+package.json => 
+	"scripts" : {
+	  "dev": "ts-node-dev src/server.ts"
+	}
+yarn dev
+
+Browser Cannot post => use insomnia
+	New Dashboard
+	New request
+	  nome q vc quiser, metodo POST
+	  localhost:3000/teste-post
+	Manage Environments
+	Base Environment
+	  {
+  	    "BaseURL": "http://localhost:3000"
+	  }
