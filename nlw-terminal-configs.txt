@@ -1,3 +1,26 @@
+/*DIA 01*/
+/*
+*GET    => BUSCAR INFORMAÇÃO
+*POST   => INSERIR INFORMAÇÃO
+*PUT    => ALTERAR INFORMAÇÃO
+*DELETE => DELETAR DADO
+*PATCH  => ALTERAR INFORMAÇÃO ESPECIFICA
+*/
+
+/**
+ * Tipos de parâmetros
+ * Routes Params => http://localhost:3000/produtos/12345678
+ * Query Params => http://localhost:3000/produtos?name=teclado&descritption=tecladobom
+ * 
+ * Body Params => { POST, PUT
+ *  "name" "teclado",
+ *  "description" "teclado bom"
+ * } 
+ */
+
+// PASSAR RECURSO = ROTA
+
+
 yarn --init -y
 yarn add typescript -D
 yarn tsc --init 	//scrict: false
@@ -22,3 +45,38 @@ Browser Cannot post => use insomnia
 	  {
   	    "BaseURL": "http://localhost:3000"
 	  }
+
+/*DIA 02*/
+Tipos de parâmetros
+Driver nativo(necessita de conhecimento)
+ORM => Frameworks que ajudam no mapeamento entre entidade e objeto
+typeORM 
+
+yarn add typeorm reflect-metadata sqlite3
+
+ormconfig.json =>
+	{
+	  "type": "sqlite", //banc de sua preferencia
+	  "database": "src/database/database.sqlite",
+	  "migrations": ["src/database/migrations/*.ts"],
+	  "cli": {
+ 	       "migrationsDir": "src/database/migrations"
+   		}
+	}
+package.json =>
+	in scripts
+	  "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+
+yarn typeorm -help 
+yarn typeorm migration:create -n CreateUsers //criar  amigration da entidade
+yarn typeorm migration:run  	//cria a tabela
+yarn typeorm migration:revert // remover a ultima migration
+
+yarn typeorm entity:create -n entidade //
+
+yarn add uuid
+yarn add @types/uuid -D
+tsconfig.json =>
+	"experimentalDecorators": true
+	"emitDecoratorMetadata": true,
+	"strictPropertyInitialization": false,
