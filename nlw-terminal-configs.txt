@@ -80,3 +80,12 @@ tsconfig.json =>
 	"experimentalDecorators": true
 	"emitDecoratorMetadata": true,
 	"strictPropertyInitialization": false,
+
+
+/** DIA 3*/
+
+middlewares => interceptadores de uma requisição 
+
+yarn add express-async-errors // express n conseguem capturar erros async por padrão
+yarn typeorm migration:create -n CreateTags
+yarn typeorm migration:run
