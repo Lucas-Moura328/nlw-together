@@ -102,3 +102,10 @@ yarn add bcryptjs
 yarn add @types/bcryptjs -D
 
 yarn typeorm migration:create -n CreateCompliments
+
+/**DIA 05 ;-;*/
+
+tsconfig.json =>
+	typeRoots [./src/@types]
+
+
