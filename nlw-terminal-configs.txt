@@ -108,4 +108,6 @@ yarn typeorm migration:create -n CreateCompliments
 tsconfig.json =>
 	typeRoots [./src/@types]
 
+yarn add class-transformer
+
 
